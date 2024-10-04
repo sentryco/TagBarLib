@@ -77,7 +77,7 @@ struct DummyBarView: View {
 ### Swift Package Manager:
 
 ```swift
-.package(url: "https://github.com/YourGitHub/TagBarLib.git", branch: "main")
+.package(url: "https://github.com/sentryco/TagBarLib.git", branch: "main")
 ```
 
 ### Todo:
