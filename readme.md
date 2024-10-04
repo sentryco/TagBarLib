@@ -1,3 +1,5 @@
+[![Tests](https://github.com/sentryco/TagBarLib/actions/workflows/Tests.yml/badge.svg)](https://github.com/sentryco/TagBarLib/actions/workflows/Tests.yml)
+
 # TagBarLib
 
 > Horizontal TagBar for iOS
@@ -77,11 +79,12 @@ struct DummyBarView: View {
    }
    return DummyContainer()
 }
+```
 
 ### Swift Package Manager:
 
 ```swift
-.package(url: "https://github.com/YourGitHub/TagBarLib.git", branch: "main")
+.package(url: "https://github.com/sentryco/TagBarLib.git", branch: "main")
 ```
 
 ### Todo:
