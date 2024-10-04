@@ -73,6 +73,7 @@ struct DummyBarView: View {
    }
    return DummyContainer()
 }
+```
 
 ### Swift Package Manager:
 
