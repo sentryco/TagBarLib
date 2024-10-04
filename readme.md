@@ -30,6 +30,7 @@ let tagBarView = TagBarView(tagTypes: [.red, .blue, .green], selection: $selecte
 ```
 
 ## Debug code snippet
+
 If there is UITest issues etc. Try to find the issue with this simpler example snippet:
 ```swift
 import SwiftUI
@@ -71,9 +72,14 @@ struct DummyBarView: View {
    return DummyContainer()
 }
 
+### Swift Package Manager:
 
+```swift
+.package(url: "https://github.com/YourGitHub/TagBarLib.git", branch: "main")
 ```
+
 ### Todo:
+
 - Add xCode proj, with the TagBarTest code
-- SwiftUI might have this component, it doesn't 
+- SwiftUI might have this component (it doesn't)
 - Add dedicated UITests later 👈 see main uitests for how to do it etc
