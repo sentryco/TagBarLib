@@ -14,7 +14,7 @@ let package = Package(
             targets: ["TagBarLib"]) // Defines the library product for TagBarLib
     ],
     dependencies: [
-      .package(url: "https://github.com/sentryco/HybridColor", branch: "main") // Dependency for HybridColor
+      .package(url: "https://github.com/sentryco/HybridColor.git", branch: "main") // Dependency for HybridColor
     ],
     targets: [
         .target(
