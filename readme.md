@@ -1,3 +1,5 @@
+[![Tests](https://github.com/sentryco/TagBarLib/actions/workflows/Tests.yml/badge.svg)](https://github.com/sentryco/TagBarLib/actions/workflows/Tests.yml)
+
 # TagBarLib
 
 > TagBarLib is a Swift package that provides a customizable Tag Bar view for your iOS and macOS applications.
