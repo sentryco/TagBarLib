@@ -1,6 +1,12 @@
 # TagBarLib
 
-> TagBarLib is a Swift package that provides a customizable Tag Bar view for your iOS and macOS applications.
+> Horizontal TagBar for iOS
+
+<img src="https://s1.gifyu.com/images/SBHlN.gif" width="291px" alt="TagBarLib Demo">
+
+## Description
+
+TagBarLib is a Swift package that provides a customizable Tag Bar view for your iOS and macOS applications.
 
 ## Table of Contents
 - [Mindset](#mindset)
