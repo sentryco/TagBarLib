@@ -6,7 +6,9 @@ import SwiftUI
 extension TagItemViewModifier {
    /**
     * Returns the tag item style for the specified selection state
-    * - Description: This function determines the style of a tag item based on its selection state. It takes a boolean parameter 'selected' and returns the corresponding style. If 'selected' is true, it returns the active style, otherwise it returns the inactive style.
+    * - Description: This function determines the style of a tag item based on its selection state. 
+    *                It takes a boolean parameter 'selected' and returns the corresponding style. 
+    *                If 'selected' is true, it returns the active style, otherwise it returns the inactive style.
     * - Parameter selected: A boolean value indicating whether the tag item is selected or not
     * - Returns: The tag item style for the specified selection state
     * - Remark: The `active` style is returned if the tag item is selected, otherwise the `inActive` style is returned
@@ -16,7 +18,9 @@ extension TagItemViewModifier {
    }
    /**
     * The default styles for the tag item (active and inactive)
-    * - Description: This property holds the default styles for the tag item in both active and inactive states. The active style is applied when the tag item is selected, and the inactive style is applied when the tag item is not selected.
+    * - Description: This property holds the default styles for the tag item in both active and inactive states. 
+    *                The active style is applied when the tag item is selected, and the inactive style is applied 
+    *                when the tag item is not selected.
     * - Note: Find this in the legacy project under: `Pallet.SideBar.highlight`
     * - Fixme: ⚠️️ Use more colors from Pallet etc
     */
@@ -28,7 +32,8 @@ extension TagItemViewModifier {
    }()
    /**
     * Active
-    * - Description: This represents the active style for a tag item. It includes the label color, icon color, and background color for a tag item when it is selected.
+    * - Description: This represents the active style for a tag item. It includes the label color, icon color, 
+    *                and background color for a tag item when it is selected.
     */
    fileprivate static let active: Style = {
       let labelColor: Color = {
@@ -51,7 +56,8 @@ extension TagItemViewModifier {
    }()
    /**
     * inActive
-    * - Description: This represents the inactive style for a tag item. It includes the label color, icon color, and background color for a tag item when it is not selected.
+    * - Description: This represents the inactive style for a tag item. It includes the label color, icon color, 
+    *                and background color for a tag item when it is not selected.
     */
    fileprivate static let inActive: Style = {
       let labelColor: Color = {
@@ -71,7 +77,8 @@ extension TagItemViewModifier {
 }
 /**
  * A placeholder type alias for a future implementation of the tag item style.
- * - Description: The `Style` struct defines the visual appearance of a tag item within the TagBar, including its label color, background color, and icon color when it is in an active state.
+ * - Description: The `Style` struct defines the visual appearance of a tag item within the TagBar, 
+ *                including its label color, background color, and icon color when it is in an active state.
  * - Remark: Consider using a struct instead of a type alias for better type safety and encapsulation.
  * - Fixme: ⚠️️ This type alias is a placeholder and should be replaced with a proper implementation.
  * - Fixme: ⚠️️ Maybe use proper button style etc?
@@ -79,7 +86,9 @@ extension TagItemViewModifier {
 extension TagItemViewModifier {
    /**
     * A type alias for the tag item style, which consists of a label color, background color, and icon color.
-    * - Description: The `Style` struct encapsulates the visual properties of a tag item, defining how it appears within the TagBar. It includes properties for the label color, background color, and icon color, which can be customized to represent different states or themes.
+    * - Description: The `Style` struct encapsulates the visual properties of a tag item, 
+    *                defining how it appears within the TagBar. It includes properties for the label color, 
+    *                background color, and icon color, which can be customized to represent different states or themes.
     * - Remark: The `labelColor` element specifies the color of the tag item's label.
     * - Remark: The `backgroundColor` element specifies the background color of the tag item.
     * - Remark: The `iconColor` element specifies the color of the tag item's icon.
@@ -91,7 +100,9 @@ extension TagItemViewModifier {
    }
    /**
     * A type alias for the tag item styles, which consists of an active and inactive style.
-    * - Description: The `Styles` struct encapsulates the visual properties of a tag item in both active and inactive states. It includes properties for the active and inactive styles, which can be customized to represent different states of the tag item within the TagBar.
+    * - Description: The `Styles` struct encapsulates the visual properties of a tag item in both active and inactive states. 
+    *                It includes properties for the active and inactive styles, which can be customized to represent 
+    *                different states of the tag item within the TagBar.
     * - Remark: The `active` element specifies the style of the tag item when it is selected.
     * - Remark: The `inActive` element specifies the style of the tag item when it is not selected.
     */

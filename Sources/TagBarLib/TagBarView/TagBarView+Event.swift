@@ -13,7 +13,7 @@ extension TagBarView {
     * - Remark: Notifies callback listeners of the pressed tag item's type
     * - Fixme: ⚠️️ We might be able to make the anim better with: https://sarunw.com/posts/a-first-look-at-matchedgeometryeffect/
     * - Fixme: ⚠️️ We might only need a reference to the tag item and not it's type
-    * - Fixme: ⚠️️ Clean up doc a bit 👈 ?
+    * - Fixme: ⚠️️ Clean up doc a bit 👈 ask copilot etc ?
     * - Parameter index: index of the item that is pressed
     */
    func handleItemPress(index: Int) {

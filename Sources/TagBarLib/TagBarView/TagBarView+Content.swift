@@ -79,7 +79,10 @@ extension TagBarView {
    /**
     * Tag-item
     * - Abstract: Creates a tag item view with a text label and an icon.
-    * - Description: This function creates a view for an individual tag item within the `TagBarView`. It displays the tag's title and, if available, an icon. The view is styled to indicate whether it is the currently selected tag and is interactive, responding to tap gestures by updating the selection state.
+    * - Description: This function creates a view for an individual tag item within the `TagBarView`. 
+    *                It displays the tag's title and, if available, an icon. The view is styled to 
+    *                indicate whether it is the currently selected tag and is interactive, 
+    *                responding to tap gestures by updating the selection state.
     * - Important: ⚠️️ The vertical padding fix has a side effect in that the padding is added to the entire height of the component, so setting padding on the component doesnt hit the edge. So it comes with built in padding of sorts, fix later
     * - Note: This was static, but seems better to use non static, as static adds many params etc
     * - Note: It is possible to use a button as well but the issue remains with detecting hit in UITest
@@ -113,7 +116,10 @@ extension TagBarView {
    }
    /**
     * Background view - "HighlightView"
-    * - Description: This method generates a transparent background view that is used to capture the geometry of the tag item for dynamic layout adjustments. It is essential for managing the visual highlight of the selected tag by updating its position and ensuring it is visible within the ScrollView.
+    * - Description: This method generates a transparent background view that is used to capture the geometry 
+    *                of the tag item for dynamic layout adjustments. It is essential for managing the visual 
+    *                highlight of the selected tag by updating its position and ensuring it is visible within 
+    *                the ScrollView.
     * - Note: We keep this in a seperate method to keep things simpler
     * - Note: Ref: https://swiftwithmajid.com/2023/06/27/mastering-scrollview-in-swiftui-scroll-position/
     * - Note: Ref: https://stackoverflow.com/questions/57028165/swiftui-scrollview-how-to-modify-content-offset-aka-paging

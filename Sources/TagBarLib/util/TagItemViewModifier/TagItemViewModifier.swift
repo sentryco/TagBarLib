@@ -1,7 +1,8 @@
 import SwiftUI
 /**
  * Represents an item in the `TagBar`
- * - Description: A modifier that applies a specific style to a TagBarItem in the TagBar. This includes setting the icon color, font color, icon name, padding, and background color.
+ * - Description: A modifier that applies a specific style to a TagBarItem in the TagBar. 
+ *                This includes setting the icon color, font color, icon name, padding, and background color.
  * - Remark: Has icon and label and active / in-active state
  * - Note: The reason we don't make tag-item-view as a button, is because we need to use gesture on down events, but could be Worth an exploration later if its possible to use Button. will require some lengthy effort probably
  * - Fixme: ⚠️️ Remove style etc? just use modifier etc, store style in a custom modifier etc? still relevant?
@@ -52,7 +53,9 @@ extension TagItemViewModifier {
    /**
     * Create icon-view
     * - Abstract: This function creates a view for the icon of the tag item.
-    * - Description: This function generates a view for the icon of the tag item. It applies the header icon view modifier to an empty view, setting the icon name, padding, icon color, background color, and stroke color according to the style specified for the tag item.
+    * - Description: This function generates a view for the icon of the tag item. It applies the header icon 
+    *                view-modifier to an empty view, setting the icon name, padding, icon color, background color, 
+    *                and stroke color according to the style specified for the tag item.
     * - Returns: A view that represents the icon of the tag item.
     * - Fixme: ⚠️️ use .clear instead?
     */
@@ -73,7 +76,10 @@ extension TagItemViewModifier {
 extension View {
    /**
     * Applies the tag item view modifier to a view, configuring its appearance and layout based on the selection state and icon name.
-    * - Description: This function applies a tag item view modifier to a view, adjusting its appearance and layout based on the selection state and icon name. If the tag item is selected, it will be styled differently to indicate its active state. The icon name parameter determines the specific icon to be displayed within the tag item.
+    * - Description: This function applies a tag item view modifier to a view, 
+    *                adjusting its appearance and layout based on the selection state and icon name. 
+    *                If the tag item is selected, it will be styled differently to indicate its active state. 
+    *                The icon name parameter determines the specific icon to be displayed within the tag item.
     * - Parameters:
     *   - isSelected: A boolean indicating whether the tag item is selected or not. This affects the visual styling of the tag item.
     *   - iconName: The name of the icon to be displayed within the tag item.

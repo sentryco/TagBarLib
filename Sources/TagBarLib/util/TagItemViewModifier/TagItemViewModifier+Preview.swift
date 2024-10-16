@@ -1,7 +1,9 @@
 import SwiftUI
 /**
  * Preview (This preview isnt that useful)
- * - Description: This preview showcases the usage of the `TagItemViewModifier` on a `Text` view. It demonstrates how the modifier changes the appearance of the text based on the `isSelected` state and the specified icon name.
+ * - Description: This preview showcases the usage of the `TagItemViewModifier` on a `Text` view. 
+ *                It demonstrates how the modifier changes the appearance of the text based on 
+ *                the `isSelected` state and the specified icon name.
  * - Fixme: ⚠️️ Add darkmode, add blackwhite bg
  */
 #Preview {

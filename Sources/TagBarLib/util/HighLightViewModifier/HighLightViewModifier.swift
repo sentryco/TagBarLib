@@ -25,7 +25,9 @@ extension HighLightViewModifier {
 extension HighLightViewModifier {
    /**
     * Rounded rectangle
-    * - Description: This view represents a rounded rectangle that is used as a background for the highlighted area. It is configured with a specific corner radius and color scheme depending on the current mode (light or dark). The size and position of the rectangle are determined by the `rect` property.
+    * - Description: This view represents a rounded rectangle that is used as a background for the highlighted area. 
+    *                It is configured with a specific corner radius and color scheme depending on the current mode 
+    *                (light or dark). The size and position of the rectangle are determined by the `rect` property.
     */
    fileprivate var roundedRectangle: some View {
       RoundedRectangle(cornerRadius: cornerRadius) // A view that highlights a `TagBarItem` with a rounded corner background
@@ -47,13 +49,17 @@ extension HighLightViewModifier {
 }
 /**
  * Extension to `HighlightView` to provide setter methods for highlighting a `TagBarItem`
- * - Description: This extension provides a method to apply a highlight view modifier to a `TagBarItem`. The highlight view modifier creates a highlighted area with a rounded corner background around the `TagBarItem`.
+ * - Description: This extension provides a method to apply a highlight view modifier to a `TagBarItem`. 
+ *                The highlight view modifier creates a highlighted area with a rounded corner background 
+ *                around the `TagBarItem`.
  * - Fixme: ⚠️️ This can be constrained with where clause, check other code 
  */
 extension View {
    /**
     * Sets the highlight view to the specified `TagBarItem` rect
-    * - Description: This function applies a highlight view modifier to a specified `TagBarItem` within a `TagBarView`. The highlight view modifier creates a highlighted area with a rounded corner background around the `TagBarItem`, visually indicating it as the currently selected item.
+    * - Description: This function applies a highlight view modifier to a specified `TagBarItem` within a `TagBarView`. 
+    *                The highlight view modifier creates a highlighted area with a rounded corner background around 
+    *                the `TagBarItem`, visually indicating it as the currently selected item.
     * - Parameters:
     *   - rect: The rectangle that defines the area to be highlighted.
     *   - cornerRadius: The corner radius of the highlight view.
@@ -75,12 +81,14 @@ extension View {
 fileprivate struct HighLightViewModifier: ViewModifier {
    /**
     * The rectangle that defines the area to be highlighted.
-    * - Description: This property defines the rectangle area that will be highlighted. It is used to determine the size and position of the highlight view.
+    * - Description: This property defines the rectangle area that will be highlighted. 
+    *                It is used to determine the size and position of the highlight view.
     */
    let rect: CGRect
    /**
     * The corner radius of the highlight view.
-    * - Description: This property sets the corner radius of the highlight view. A larger value will result in a more rounded corner.
+    * - Description: This property sets the corner radius of the highlight view. 
+    *                A larger value will result in a more rounded corner.
     */
    let cornerRadius: CGFloat
 }
