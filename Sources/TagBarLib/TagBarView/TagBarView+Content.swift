@@ -7,7 +7,11 @@ import SwiftUI
 extension TagBarView {
    /**
     * Body content
-    * - Description: This method is used to generate the body content of the `TagBarView`. It creates a `ScrollViewReader` that allows for scrolling operations within the view. The `scrollView` function is then called with the `ScrollViewProxy` reader as a parameter.
+    * - Description: This method is used to generate the body content of the
+    *                `TagBarView`. It creates a `ScrollViewReader` that allows
+    *                for scrolling operations within the view. The `scrollView`
+    *                function is then called with the `ScrollViewProxy` reader
+    *                as a parameter.
     * - Parameter reader: The `ScrollViewProxy` instance used for scrolling operations within the `TagBarView`.
     * - Returns: A `ScrollView` component with a horizontal stack of tag items.
     * - Fixme: ⚠️️ Use @selected state, see other code regarding this 👈
@@ -25,7 +29,11 @@ extension TagBarView {
    /**
     * Scroll-view
     * - Abstract: Creates a horizontal stack of tag items.
-    * - Description: This function creates a `ScrollView` that allows the `TagBarView` to display its tag items in a horizontally scrollable view. It uses the provided `ScrollViewProxy` to manage the scrolling behavior and position of the `TagBarView`.
+    * - Description: This function creates a `ScrollView` that allows the
+    *                `TagBarView` to display its tag items in a horizontally
+    *                scrollable view. It uses the provided `ScrollViewProxy` to
+    *                manage the scrolling behavior and position of the
+    *                `TagBarView`.
     * - Fixme: ⚠️️ Consider using `UIColor.systemGroupedBackground` as background color etc
     * - Parameter reader: The `ScrollViewProxy` instance used for scrolling operations within the `TagBarView`.
     * - Returns: A `ScrollView` component with a horizontal stack of tag items.
@@ -42,7 +50,9 @@ extension TagBarView {
    }
    /**
     * Creates a horizontal stack of tag items.
-    * - Description: This function generates a horizontal stack view containing all the tag items, allowing for horizontal scrolling.
+    * - Description: This function generates a horizontal stack view
+    *                containing all the tag items, allowing for horizontal
+    *                scrolling.
     * - Parameter reader: The `ScrollViewProxy` instance used for scrolling operations within the `TagBarView`.
     * - Returns: A `View` representing the horizontal stack of tag items.
     */
@@ -58,7 +68,10 @@ extension TagBarView {
    }
    /**
     * Creates an array of `TagItem` views
-    * - Description: This function generates a series of `TagItem` views from the `tagTypes` array. Each `TagItem` view represents a selectable tag with a title and optional icon, laid out in a horizontal sequence for the `TagBarView`.
+    * - Description: This function generates a series of `TagItem` views from
+    *                the `tagTypes` array. Each `TagItem` view represents a
+    *                selectable tag with a title and optional icon, laid out in
+    *                a horizontal sequence for the `TagBarView`.
     * - Parameter reader: The `ScrollViewProxy` instance used for scrolling operations within the `TagBarView`.
     * - Returns: A `View` representing the array of `TagItem` views.
     */

@@ -1,12 +1,16 @@
 import SwiftUI
 import HybridColor
 /**
- * This extension adds a highlight view modifier to a view, allowing for the creation of a highlighted area with a rounded corner background.
+ * - Description: This extension adds a highlight view modifier to a view,
+ *                allowing for the creation of a highlighted area with a
+ *                rounded corner background.
  * - Abstract: Highlights a `TagBarItem` with a rounded corner background
  */
 extension HighLightViewModifier {
    /**
-    * This function applies a highlight view modifier to the content view, creating a highlighted area with a rounded corner background.
+    * - Desctiption: This function applies a highlight view modifier to the
+    *                content view, creating a highlighted area with a rounded
+    *                corner background.
     * - Fixme: ⚠️️ Clean up colors a bit etc, in what way?
     * - Fixme: ⚠️️ Use this as the foreground color etc: `Palette.SideBar.highlight`
     * - Parameter content: The view to which the highlight view modifier is applied.

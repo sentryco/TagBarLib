@@ -2,7 +2,11 @@ import SwiftUI
 import HybridColor
 /**
  * Used for `back` and `more` button in header
- * - Description: The `HeaderIconStyle` is a `ButtonStyle` used to style header buttons with a consistent design language. It defines the visual elements of the button, such as icon name, size, color, background, stroke color, and padding, ensuring a cohesive look for all header buttons.
+ * - Description: The `HeaderIconStyle` is a `ButtonStyle` used to style header
+ *                buttons with a consistent design language. It defines the visual
+ *                elements of the button, such as icon name, size, color,
+ *                background, stroke color, and padding, ensuring a cohesive look
+ *                for all header buttons.
  * - Note: "Metro-Noir" esque ButtonStyle
  * - Note: Alternative name: `HeaderIconButtonStyle`
  * - Fixme: ⚠️️ Rename to ? or too long and just keep as is? Rename yes. 

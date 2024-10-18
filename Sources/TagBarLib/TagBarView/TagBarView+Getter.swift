@@ -5,7 +5,9 @@ import SwiftUI
 extension TagBarView {
    /**
     * Returns the title string of the currently selected `TagBarItem`
-    * - Description: This method retrieves the title string of the currently selected `TagBarItem`. If no item is selected or the selection index is out of bounds, it returns `nil`.
+    * - Description: This method retrieves the title string of the currently
+    *                selected `TagBarItem`. If no item is selected or the
+    *                selection index is out of bounds, it returns `nil`.
     * - Note: Returns `nil` if no item is selected
     * - Returns: An optional `String` containing the title of the selected `TagBarItem`, or `nil` if no item is selected.
     * - Fixme: ⚠️️ use safe: array call ? add safe extension to package etc?

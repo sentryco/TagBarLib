@@ -27,16 +27,3 @@ import HybridColor
    }
    return DebugView()
 }
-//   .padding()
-//   .frame(maxWidth: .infinity) // wide as allowed // .frame(width: UIScreen.main.bounds.width / 1.205, height: 44)
-//   .font(.body.bold()) // text
-//   .foregroundColor(.white)
-//   .background(
-//      Capsule()
-//         .fill(Color.black)
-//      )
-//extension ButtonStyle where Self == HeaderIconStyle {
-//   static func headerIconStyle(iconName: String, iconSize: CGFloat = 16, padding: CGFloat = 16, iconColor: Color = .white, backgroundColor: Color = Color.init(uiColor: .darkGray).opacity(0.2), strokeColor: Color = .white.opacity(0.5), strokeWidth: CGFloat = 2) -> Self {
-//      return .init(iconName: iconName, iconSize: iconSize, iconColor: iconColor, backgroundColor: backgroundColor, strokeColor: strokeColor, strokeWidth: strokeWidth, padding: padding)
-//   }
-//}

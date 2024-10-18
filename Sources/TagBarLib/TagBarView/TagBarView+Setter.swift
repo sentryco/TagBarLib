@@ -5,7 +5,11 @@ import SwiftUI
 extension TagBarView {
    /**
     * Sets the selected `TagBarItem` based on its title string
-    * - Description: This method searches for a `TagBarItem` by its title and updates the `selection` state to the index of the found item, effectively selecting it within the `TagBarView`. If the item with the given title does not exist, the selection is not changed.
+    * - Description: This method searches for a `TagBarItem` by its title and
+    *                updates the `selection` state to the index of the found item,
+    *                effectively selecting it within the `TagBarView`. If the item
+    *                with the given title does not exist, the selection is not
+    *                changed.
     * - Parameter title: The title string of the `TagBarItem` to select
     */
    public func setSelected(title: String) {
@@ -16,7 +20,12 @@ extension TagBarView {
    }
    /**
     * Sets the selected `TagBarItem` based on its index in the `stackView`
-    * - Description: This method sets the selected `TagBarItem` based on its index in the `tagTypes` array. It ensures the index is within the bounds of the array and then updates the `selection` state to the provided index, effectively selecting the corresponding `TagBarItem` within the `TagBarView`.
+    * - Description: This method sets the selected `TagBarItem` based on its
+    *                index in the `tagTypes` array. It ensures the index is
+    *                within the bounds of the array and then updates the
+    *                `selection` state to the provided index, effectively
+    *                selecting the corresponding `TagBarItem` within the
+    *                `TagBarView`.
     * - Parameter idx: The index of the `TagBarItem` to select
     */
    public func setSelected(idx: Int) {

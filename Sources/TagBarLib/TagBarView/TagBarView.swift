@@ -38,13 +38,19 @@ public struct TagBarView: View {
     */
    @Binding public var selection: Int
    /**
-    * - Description: This state variable holds the current position and size of the highlight view. It is updated whenever a new tag is selected, causing the highlight view to animate to the new position.
+    * - Description: This state variable holds the current position and size
+    *                of the highlight view. It is updated whenever a new tag is
+    *                selected, causing the highlight view to animate to the new
+    *                position.
     * - Note: `.onAppear` and is selected set highlightRect which then sets the bellow, default should be .zero
     */
    @State var highlight: CGRect = .zero // Sets the highlight view to the specified `TagBarItem`.
    /**
     * Initializes a new instance of `TagBarView`.
-    * - Description: This initializer sets up the `TagBarView` instance with the provided `tagTypes` model and initializes the `selection` binding which represents the currently selected tag index.
+    * - Description: This initializer sets up the `TagBarView` instance with
+    *                the provided `tagTypes` model and initializes the
+    *                `selection` binding which represents the currently
+    *                selected tag index.
     * - Note: This method sets up the `TagBarView` instance with the provided `tagTypes` model.
     * - Note: It also initializes the `selection` binding
     * - Fixme: ⚠️️ Add an init that converts selectedTagType to selection-index etc?

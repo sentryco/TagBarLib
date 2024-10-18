@@ -95,3 +95,5 @@ struct DummyBarView: View {
 - Try refactoring TagBarView+Content.swift with copilot / cursor
 - Code Simplification and Documentation
 - Enhancements in Preview and Debugging Support
+- Improve dynamic type sizes. relative font sizes etc
+- Refactoring and Code Simplification - TagBarView+Content.swift: The code in this file appears complex and could benefit from refactoring for better readability and maintainability. Consider simplifying the methods and possibly breaking down complex views into smaller, more manageable components.

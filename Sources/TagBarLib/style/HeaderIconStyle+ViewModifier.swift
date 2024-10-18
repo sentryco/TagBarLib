@@ -2,7 +2,9 @@ import SwiftUI
 import HybridColor
 /**
  * View modifier
- * - Description: A `ViewModifier` for applying a consistent icon style to header elements. It configures the icon's appearance including its name, size, color, background, stroke, and padding.
+ * - Description: This `ViewModifier` ensures uniform styling for header icons
+ *                by configuring attributes such as the icon's name, size, color,
+ *                background, stroke, and padding.
  * - Fixme: ⚠️️ Use modifiers for some of the styling here etc
  */
 fileprivate struct HeaderIconViewModifier: ViewModifier {
@@ -41,7 +43,7 @@ fileprivate struct HeaderIconViewModifier: ViewModifier {
 extension HeaderIconViewModifier {
    /**
     * The main body of the view modifier.
-    * This function composes the icon, stroke, and fill views to create the final icon view.
+    * - Abstract: This function composes the icon, stroke, and fill views to create the final icon view.
     * - Fixme: ⚠️️ Remake this as image modifier and make it more modular etc, find the image modifier code somewhere etc
     * - Fixme: ⚠️️ There might be a simpler way of adding both foreground color and stroke to a circle
     * - Parameter content: The content view that this modifier is applied to.
@@ -114,7 +116,7 @@ extension View {
     *   - strokeWidth: The width of the stroke around the icon.
     * - Returns: A view representing the styled image.
     */
-   @warn_unqualified_access // ref: https://www.hackingwithswift.com/quick-start/swiftui/how-to-make-swiftui-modifiers-safer-to-use-with-warn-unqualified-access
+   @warn_unqualified_access // Ref: https://www.hackingwithswift.com/quick-start/swiftui/how-to-make-swiftui-modifiers-safer-to-use-with-warn-unqualified-access
    func headerIconViewModifier(iconName: String, iconSize: CGFloat = 16, padding: CGFloat = 16, iconColor: Color = .white, backgroundColor: Color = Color(light: .darkGray.opacity(0.1), dark: .darkGray.opacity(0.2)), strokeColor: Color = Color.blackOrWhite, strokeWidth: CGFloat = 2) -> some View {
       self.modifier(
          HeaderIconViewModifier(

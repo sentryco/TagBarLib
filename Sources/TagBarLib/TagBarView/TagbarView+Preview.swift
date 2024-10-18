@@ -35,7 +35,11 @@ import HybridColor
 extension TagBarView {
    /**
     * Dummy data
-    * - Description: Provides a list of string labels used for generating dummy `TagBarItem` views in the preview environment. These labels represent the titles of the tags that will be displayed in the `TagBarView` for demonstration purposes.
+    * - Description: Provides a list of string labels used for generating
+    *                dummy `TagBarItem` views in the preview environment.
+    *                These labels represent the titles of the tags that will
+    *                be displayed in the `TagBarView` for demonstration
+    *                purposes.
     * - Fixme: ⚠️️ Use better test data
     */
    fileprivate static let list: [String] = [
@@ -49,7 +53,12 @@ extension TagBarView {
    ]
    /**
     * Provides a static array of `TagTypeKind` for preview purposes.
-    * - Description: This static array is used to populate the `TagBarView` with a set of predefined `TagTypeKind` instances. Each instance represents a tag item with a title and an associated icon, which is used to demonstrate the appearance and functionality of the `TagBarView` in a preview environment.
+    * - Description: This static array is used to populate the `TagBarView`
+    *                with a set of predefined `TagTypeKind` instances. Each
+    *                instance represents a tag item with a title and an
+    *                associated icon, which is used to demonstrate the
+    *                appearance and functionality of the `TagBarView` in a
+    *                preview environment.
     * - Fixme: ⚠️️ Add custom icons to debug test
     */
    static let tagItems: [TagTypeKind] = TagBarView.list.map {

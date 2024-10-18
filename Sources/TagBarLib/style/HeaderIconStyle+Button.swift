@@ -6,7 +6,11 @@ import HybridColor
 extension Button {
    /**
     * Applies a custom style to a button to make it look like a header icon.
-    * - Description: This method customizes a `Button` to have a header icon appearance, using the `HeaderIconStyle`. It sets the icon's name, size, padding, color, background color, stroke color, and stroke width to the button, creating a consistent look that matches the header's design language.
+    * - Description: This method customizes a `Button` to have a header icon
+    *                appearance, using the `HeaderIconStyle`. It sets the icon's
+    *                name, size, padding, color, background color, stroke color,
+    *                and stroke width to the button, creating a consistent look
+    *                that matches the header's design language.
     * - Fixme: ⚠️️ Move color consts to pallet? 👈, nope, tagbarlib doesnt have access to interfacelib
     * - Parameters:
     *   - iconName: The name of the icon to display on the button.
