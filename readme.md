@@ -8,7 +8,7 @@
 
 ## Description
 
-TagBarLib is a Swift package that provides a customizable Tag Bar view for your iOS and macOS applications.
+TagBarLib is a Swift package that provides a customizable Tag Bar view for iOS
 
 ## Table of Contents
 - [Mindset](#mindset)
