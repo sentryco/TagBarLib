@@ -88,7 +88,7 @@ struct DummyBarView: View {
 ```
 
 ### Todo:
-
+- Add example to readme
 - Add xCode proj, with the TagBarTest code 👈 (import the package via url, see splitview repo regarding this)
 - Add dedicated UITests later 👈 see main uitests for how to do it etc
 - Testing and Dependency Management (Expand Testing: The test suite appears minimal and could be expanded to cover more functionality, ensuring stability as the library evolves.)
