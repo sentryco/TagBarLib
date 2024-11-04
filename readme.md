@@ -1,4 +1,5 @@
 [![Tests](https://github.com/sentryco/TagBarLib/actions/workflows/Tests.yml/badge.svg)](https://github.com/sentryco/TagBarLib/actions/workflows/Tests.yml)
+[![codebeat badge](https://codebeat.co/badges/959f5756-05b8-44d5-b7da-8780402fee5a)](https://codebeat.co/projects/github-com-sentryco-tagbarlib-main)
 
 # TagBarLib
 
