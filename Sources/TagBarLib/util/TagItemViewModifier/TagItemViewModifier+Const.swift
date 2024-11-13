@@ -7,15 +7,15 @@ extension TagItemViewModifier {
    /**
     * The horizontal margin between tag items.
     */
-   static let horizontalMargin: CGFloat = 12
+   internal static let horizontalMargin: CGFloat = 12
    /**
     * The vertical margin between tag items.
     */
-   static let verticalMargin: CGFloat = 8
+   internal static let verticalMargin: CGFloat = 8
    /**
     * The padding for the tag item.
     */
-   static let padding: EdgeInsets = {
+   internal static let padding: EdgeInsets = {
       .init(
          top: Self.verticalMargin, // Sets the top margin to the static verticalMargin value
          leading: Self.horizontalMargin, // Sets the leading margin to the static horizontalMargin value

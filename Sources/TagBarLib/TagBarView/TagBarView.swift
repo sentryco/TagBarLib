@@ -27,7 +27,7 @@ public struct TagBarView: View {
     * - Important: ⚠️️ Using this as padding avoids clipping that would occure with normal padding etc
     * - Fixme: ⚠️️ move 12 to const? 👈
     */
-   let internalHorizontalMargin: CGFloat = 12
+   internal let internalHorizontalMargin: CGFloat = 12
    /**
     * Provides the index of the currently selected tag within the `tagTypes` array.
     * - Important: ⚠️️ We must use a selction to init
@@ -44,7 +44,7 @@ public struct TagBarView: View {
     *                position.
     * - Note: `.onAppear` and is selected set highlightRect which then sets the bellow, default should be .zero
     */
-   @State var highlight: CGRect = .zero // Sets the highlight view to the specified `TagBarItem`.
+   @State internal var highlight: CGRect = .zero // Sets the highlight view to the specified `TagBarItem`.
    /**
     * Initializes a new instance of `TagBarView`.
     * - Description: This initializer sets up the `TagBarView` instance with

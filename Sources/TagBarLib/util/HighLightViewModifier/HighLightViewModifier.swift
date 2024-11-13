@@ -1,6 +1,23 @@
 import SwiftUI
 import HybridColor
 /**
+ * View modifier
+ */
+fileprivate struct HighLightViewModifier: ViewModifier {
+   /**
+    * The rectangle that defines the area to be highlighted.
+    * - Description: This property defines the rectangle area that will be highlighted.
+    *                It is used to determine the size and position of the highlight view.
+    */
+   fileprivate let rect: CGRect
+   /**
+    * The corner radius of the highlight view.
+    * - Description: This property sets the corner radius of the highlight view.
+    *                A larger value will result in a more rounded corner.
+    */
+   fileprivate let cornerRadius: CGFloat
+}
+/**
  * - Description: This extension adds a highlight view modifier to a view,
  *                allowing for the creation of a highlighted area with a
  *                rounded corner background.
@@ -16,7 +33,7 @@ extension HighLightViewModifier {
     * - Parameter content: The view to which the highlight view modifier is applied.
     * - Returns: A view with the highlight view modifier applied.
     */
-   func body(content: Content) -> some View {
+   fileprivate func body(content: Content) -> some View {
       content
          .background {
             roundedRectangle
@@ -71,28 +88,11 @@ extension View {
     * ## Examples:
     * Rectanle().highLightViewModifier(rect: .zero, cornerRadius: .zero)
     */
-   func highLightViewModifier(rect: CGRect, cornerRadius: CGFloat) -> some View {
+   internal func highLightViewModifier(rect: CGRect, cornerRadius: CGFloat) -> some View {
       let modifier = HighLightViewModifier(
          rect: rect, // The rectangle that defines the area to be highlighted.
          cornerRadius: cornerRadius // The corner radius of the highlight view.
       )
       return self.modifier(modifier)
    }
-}
-/**
- * View modifier
- */
-fileprivate struct HighLightViewModifier: ViewModifier {
-   /**
-    * The rectangle that defines the area to be highlighted.
-    * - Description: This property defines the rectangle area that will be highlighted. 
-    *                It is used to determine the size and position of the highlight view.
-    */
-   let rect: CGRect
-   /**
-    * The corner radius of the highlight view.
-    * - Description: This property sets the corner radius of the highlight view. 
-    *                A larger value will result in a more rounded corner.
-    */
-   let cornerRadius: CGFloat
 }

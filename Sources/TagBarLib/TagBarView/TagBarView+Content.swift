@@ -150,7 +150,7 @@ extension TagBarView {
     *   - reader: needed to scroll to the selected item on change
     * - Returns: invisible background, only needed for getting rect
     */
-   func backgroundView(i: Int, reader: ScrollViewProxy) -> some View {
+   internal func backgroundView(i: Int, reader: ScrollViewProxy) -> some View {
       GeometryReader { (_ geo: GeometryProxy) in // It's also possible to store geom reader in a let: https://stackoverflow.com/a/57936169/5389500, potential solution without reader is to get inner and outer geom reader: https://stackoverflow.com/a/75823183/5389500 and https://stackoverflow.com/questions/66198665/how-to-check-if-item-is-visible-swiftui-scrollview?noredirect=1&lq=1
          let rect: CGRect = geo.frame(in: .named(Self.nameSpace)) // Converts the GeometryProxy to a CGRect within the specified coordinate space.
          Color.clear.opacity(0.0) // We just want the reader to get triggered, so let's use an empty color

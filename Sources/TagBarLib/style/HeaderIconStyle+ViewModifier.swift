@@ -11,31 +11,31 @@ fileprivate struct HeaderIconViewModifier: ViewModifier {
    /**
     * The name of the icon to display.
     */
-   let iconName: String
+   fileprivate let iconName: String
    /**
     * The size of the icon to display.
     */
-   let iconSize: CGFloat
+   fileprivate let iconSize: CGFloat
    /**
     * The color of the icon to display.
     */
-   let iconColor: Color
+   fileprivate let iconColor: Color
    /**
     * The background color of the icon to display.
     */
-   let backgroundColor: Color
+   fileprivate let backgroundColor: Color
    /**
     * The color of the stroke around the icon to display.
     */
-   let strokeColor: Color
+   fileprivate let strokeColor: Color
    /**
     * The width of the stroke around the icon to display.
     */
-   let strokeWidth: CGFloat
+   fileprivate let strokeWidth: CGFloat
    /**
     * The padding around the icon to display.
     */
-   let padding: CGFloat
+   fileprivate let padding: CGFloat
 }
 /**
  * Content
@@ -49,7 +49,7 @@ extension HeaderIconViewModifier {
     * - Parameter content: The content view that this modifier is applied to.
     * - Returns: A view that represents the modified content with the icon, stroke, and fill applied.
     */
-   @ViewBuilder func body(content: Content) -> some View {
+   @ViewBuilder fileprivate func body(content: Content) -> some View {
       content // - Fixme: ⚠️️ remove this?
       ZStack(alignment: .init(horizontal: .center, vertical: .center)) {
          icon // The icon view with the specified properties.
@@ -61,7 +61,7 @@ extension HeaderIconViewModifier {
     * Icon
     * - Fixme: ⚠️️ try to figure out how use padding for sizing?
     */
-   var icon: some View {
+   fileprivate var icon: some View {
       Circle() // icon
          .foregroundColor(backgroundColor)
          .frame(width: iconSize + padding, height: iconSize + padding, alignment: .center)
@@ -72,7 +72,7 @@ extension HeaderIconViewModifier {
     * Stroke
     * - Fixme: ⚠️️ is this in use? doesn't seem like it, or?
     */
-   var stroke: some View {
+   fileprivate var stroke: some View {
       Circle()
          .stroke(strokeColor, lineWidth: strokeWidth) // Applies a stroke to the circle with the specified color and width.
          .foregroundColor(.clear) // Sets the foreground color to clear to ensure the stroke is visible.
@@ -89,7 +89,7 @@ extension HeaderIconViewModifier {
     * - Fixme: ⚠️️ make a background circle modifier for this
     * - Fixme: ⚠️️ use the icon modifier on this:
     */
-   var fill: some View {
+   fileprivate var fill: some View {
       Image(systemName: iconName) // Loads the system image with the specified name.
          .resizable() // Makes the image resizable.
          .aspectRatio(contentMode: .fit) // Sets the aspect ratio of the image to fit within the frame.
@@ -117,7 +117,7 @@ extension View {
     * - Returns: A view representing the styled image.
     */
    @warn_unqualified_access // Ref: https://www.hackingwithswift.com/quick-start/swiftui/how-to-make-swiftui-modifiers-safer-to-use-with-warn-unqualified-access
-   func headerIconViewModifier(iconName: String, iconSize: CGFloat = 16, padding: CGFloat = 16, iconColor: Color = .white, backgroundColor: Color = Color(light: .darkGray.opacity(0.1), dark: .darkGray.opacity(0.2)), strokeColor: Color = Color.blackOrWhite, strokeWidth: CGFloat = 2) -> some View {
+   internal func headerIconViewModifier(iconName: String, iconSize: CGFloat = 16, padding: CGFloat = 16, iconColor: Color = .white, backgroundColor: Color = Color(light: .darkGray.opacity(0.1), dark: .darkGray.opacity(0.2)), strokeColor: Color = Color.blackOrWhite, strokeWidth: CGFloat = 2) -> some View {
       self.modifier(
          HeaderIconViewModifier(
             iconName: iconName, // The name of the icon to display.

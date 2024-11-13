@@ -12,29 +12,29 @@ internal struct TagItemViewModifier: ViewModifier {
    /**
     * The icon color of the tag item.
     */
-   let iconColor: Color
+   fileprivate let iconColor: Color
    /**
     * The font color of the tag item.
     */
-   let fontColor: Color
+   fileprivate let fontColor: Color
    /**
     * The icon name of the tag item.
     */
-   let iconName: String
+   fileprivate let iconName: String
    /**
     * Horizontal padding
     */
-   let padding: EdgeInsets
+   fileprivate let padding: EdgeInsets
    /**
     * The background color of the tag item.
     */
-   let backgroundColor: Color
+   fileprivate let backgroundColor: Color
    /**
     * Applies the tag item view modifier to a content view, configuring its appearance and layout.
     * - Parameter content: The content view to which the tag item view modifier is applied.
     * - Returns: A view with the tag item view modifier applied.
     */
-   func body(content: Content) -> some View {
+   internal func body(content: Content) -> some View {
       HStack { // Button has down state etc. so not easy to use out of the box, could probably be used if research is done etc
          iconView
          content // Set the text color of the tag item's label to the label color specified by the style
@@ -59,7 +59,7 @@ extension TagItemViewModifier {
     * - Returns: A view that represents the icon of the tag item.
     * - Fixme: ⚠️️ use .clear instead?
     */
-   var iconView: some View {
+   fileprivate var iconView: some View {
       EmptyView() // Set the foreground color of the tag item's icon to the icon color specified by the style
          .headerIconViewModifier( // Apply the header icon view modifier to the empty view
             iconName: iconName, // Set the icon name of the header icon view modifier to the icon name specified by the style
@@ -85,7 +85,7 @@ extension View {
     *   - iconName: The name of the icon to be displayed within the tag item.
     * - Returns: A view with the tag item view modifier applied, incorporating the specified selection state and icon name.
     */
-   func tagItemViewModifier(isSelected: Bool, iconName: String) -> some View {
+   internal func tagItemViewModifier(isSelected: Bool, iconName: String) -> some View {
       let style: TagItemViewModifier.Style = { // Get the style for the tag item based on whether it is selected or not
          // Retrieves the style for the tag item based on its selection state
          TagItemViewModifier.getStyle(

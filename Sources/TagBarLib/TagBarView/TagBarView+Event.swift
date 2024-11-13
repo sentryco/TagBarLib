@@ -24,7 +24,7 @@ extension TagBarView {
     * - Fixme: ⚠️️ Clean up doc a bit 👈 ask copilot etc ?
     * - Parameter index: index of the item that is pressed
     */
-   func handleItemPress(index: Int) {
+   internal func handleItemPress(index: Int) {
       withAnimation { // Adds anim to list change etc
          selection = index // On tap -> set selectedIndex which is a state
       }

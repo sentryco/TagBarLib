@@ -13,7 +13,7 @@ extension TagItemViewModifier {
     * - Returns: The tag item style for the specified selection state
     * - Remark: The `active` style is returned if the tag item is selected, otherwise the `inActive` style is returned
     */
-   static func getStyle(selected: Bool) -> Style {
+   internal static func getStyle(selected: Bool) -> Style {
       selected ? styles.active : styles.inActive // If the tag item is selected, return the active style, otherwise return the inactive style
    }
    /**

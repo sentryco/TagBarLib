@@ -14,7 +14,7 @@ extension TagBarView {
     *                scroll position or applying layout modifications based on the scroll
     *                offset.
     */
-   static let coordinateSpace: String = "scrollview"
+   internal static let coordinateSpace: String = "scrollview"
    /**
     * The namespace identifier for the horizontal stack view in the `TagBarView` component is used to identify and manage the layout of the horizontal stack view within the `TagBarView`. This identifier is crucial for applying layout modifications and styling to the horizontal stack view specifically.
     * - Description: This constant uniquely identifies the horizontal stack
@@ -22,7 +22,7 @@ extension TagBarView {
     *                targeted animations and state changes specifically within
     *                this view's context.
     */
-   static let nameSpace: String = "hstack"
+   internal static let nameSpace: String = "hstack"
    /**
     * Highlight corner radius
     * - Description: This constant defines the corner radius for the highlight
@@ -30,7 +30,7 @@ extension TagBarView {
     *                highlight view rounded corners for a smoother, more visually
     *                pleasing appearance.
     */
-   static let cornerRadius: CGFloat = 8
+   internal static let cornerRadius: CGFloat = 8
    /**
     * The spacing between tag items in the TagBarView component.
     * - Description: This constant defines the horizontal spacing between
@@ -38,7 +38,7 @@ extension TagBarView {
     *                ensure consistent and visually pleasing separation between
     *                adjacent tags.
     */
-   static let spacing: CGFloat = 0 // was 4 in legacy
+   internal static let spacing: CGFloat = 0 // was 4 in legacy
    /**
     * The height of the TagBarView component
     * - Description: This constant defines the height of the TagBarView
@@ -46,7 +46,7 @@ extension TagBarView {
     *                pleasing height for the TagBarView across different screen
     *                sizes and orientations.
     */
-   static let height: CGFloat = 80
+   internal static let height: CGFloat = 80
 }
 /**
  * Typealiases used by the TagBarView component
@@ -65,5 +65,5 @@ extension TagBarView {
     *                response to user interaction.
     * - Parameter idx: The index of the item that was pressed.
     */
-   typealias HandleItemPress = (_ idx: Int) -> Void
+   internal typealias HandleItemPress = (_ idx: Int) -> Void
 }
