@@ -100,3 +100,4 @@ struct DummyBarView: View {
 - Refactoring and Code Simplification - TagBarView+Content.swift: The code in this file appears complex and could benefit from refactoring for better readability and maintainability. Consider simplifying the methods and possibly breaking down complex views into smaller, more manageable components.
 - Add ways to inject size, style, accessID. Potentially as struct or typealias
 - Remove Unit-test
+- Add problem / solution to readme
