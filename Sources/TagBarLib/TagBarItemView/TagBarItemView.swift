@@ -1,5 +1,7 @@
 import SwiftUI
 // fixme: add doc
+// fixme: add preview
+// fixme: add onPress event handler etc
 struct TagBarItemView: View, Identifiable {
    // fixme: add doc
    let id = UUID()

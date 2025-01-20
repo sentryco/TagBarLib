@@ -15,9 +15,7 @@ import SwiftUI
  * - Fixme: ⚠️️ Consider opensourcing this repo 👈
  * - Fixme: ⚠️️ Use uuid as selected index? or overkill?
  */
-public struct TagBarView: View, Identifiable {
-   // fixme: add doc
-   public let id = UUID()
+public struct TagBarView: View {
    /**
     * The model for the tag types
     * - Description: Provides a list of tag types that the `TagBarView` can display.

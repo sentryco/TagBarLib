@@ -45,7 +45,7 @@ extension TagBarView {
       ) {
          hStack(reader: reader) // Calls the hStack function with the ScrollViewProxy reader as a parameter.
       }
-      .coordinateSpace(name: Self.coordinateSpace) // Assigns the scroll view to a named coordinate space.
+      .coordinateSpace(name: Self.Constants.coordinateSpace) // Assigns the scroll view to a named coordinate space.
       .contentMargins(.horizontal, self.internalHorizontalMargin) // Adds to the content it self: (Applies to all scrollable containers within the scope) .contentMargins(Edge.Set.init(arrayLiteral: [Edge.leading(12), Edge.trailing(12)]))
    }
    /**
@@ -57,13 +57,13 @@ extension TagBarView {
     * - Returns: A `View` representing the horizontal stack of tag items.
     */
    fileprivate func hStack(reader: ScrollViewProxy) -> some View {
-      HStack(spacing: Self.spacing) { // We can also use LazyHStack here
+      HStack(spacing: Self.Constants.spacing) { // We can also use LazyHStack here
          tagItems(reader: reader)
       }
-      .coordinateSpace(name: Self.nameSpace) // This solution was found here: https://www.swiftanytime.com/blog/geometry-reader-in-swiftui
+      .coordinateSpace(name: Self.Constants.nameSpace) // This solution was found here: https://www.swiftanytime.com/blog/geometry-reader-in-swiftui
       .highLightViewModifier( // Applies the highlight view modifier to the horizontal stack.
          rect: highlight, // Specifies the rectangle for the highlight view.
-         cornerRadius: Self.cornerRadius // Sets the corner radius of the highlight view to the value defined in TagBarView constants.
+         cornerRadius: Self.Constants.cornerRadius // Sets the corner radius of the highlight view to the value defined in TagBarView constants.
       )
    }
    /**
@@ -152,7 +152,7 @@ extension TagBarView {
     */
    internal func backgroundView(i: Int, reader: ScrollViewProxy) -> some View {
       GeometryReader { (_ geo: GeometryProxy) in // It's also possible to store geom reader in a let: https://stackoverflow.com/a/57936169/5389500, potential solution without reader is to get inner and outer geom reader: https://stackoverflow.com/a/75823183/5389500 and https://stackoverflow.com/questions/66198665/how-to-check-if-item-is-visible-swiftui-scrollview?noredirect=1&lq=1
-         let rect: CGRect = geo.frame(in: .named(Self.nameSpace)) // Converts the GeometryProxy to a CGRect within the specified coordinate space.
+         let rect: CGRect = geo.frame(in: .named(Self.Constants.nameSpace)) // Converts the GeometryProxy to a CGRect within the specified coordinate space.
          Color.clear.opacity(0.0) // We just want the reader to get triggered, so let's use an empty color
             .onAppear { // we also need to account for not animating the first time
                if selection == i { // Checks if the current selection matches the index of the current tag item.
