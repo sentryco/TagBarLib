@@ -38,51 +38,7 @@ import TagBarLib
 let tagBarView = TagBarView(tagTypes: [.red, .blue, .green], selection: $selectedTag)
 ```
 
-## Debug code snippet
 
-If there is UITest issues etc. Try to find the issue with this simpler example snippet:
-```swift
-import SwiftUI
-
-struct DummyBarView: View {
-   @Binding var selectedIndex: Int
-   enum TagType: String, CaseIterable { case one, two, three, four, five, six, seven }
-   var tagTypes: [String] { TagType.allCases.map { $0.rawValue } }
-   var body: some View {
-      ScrollViewReader { (_ reader: ScrollViewProxy) in // We could use this, see for code: https://developer.apple.com/documentation/swiftui/scrollviewreader
-         ScrollView(.horizontal, showsIndicators: false) {
-            HStack() {
-               ForEach(Array(tagTypes.indices), id: \.self) { i in
-                  rowItem(i: i)
-               }
-            }
-         }
-      }
-   }
-   // fixme: add doc
-   func rowItem(i: Int) -> some View {
-      let title = tagTypes[i]
-      return Text(title)
-         .disabled(true)
-         .accessibilityIdentifier(title)
-         .padding()
-         .background(selectedIndex == i ? .green : .gray)
-         .onTapGesture {
-            selectedIndex = i
-         }
-   }
-}
-// preview
-#Preview {
-   struct DummyContainer: View {
-      @State var selectedIndex: Int = 0
-      var body: some View {
-         DummyBarView(selectedIndex: $selectedIndex)
-      }
-   }
-   return DummyContainer()
-}
-```
 
 ### Swift Package Manager:
 

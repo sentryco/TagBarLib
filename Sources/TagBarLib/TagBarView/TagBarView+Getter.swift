@@ -16,6 +16,6 @@ extension TagBarView {
       // Make sure selection is within count
       guard selection < self.tagTypes.count else { return nil }
       // Cast the selected item to TagItemView and return it's title string
-      return self.tagTypes[selection].title
+      return self.tagTypes[safe: selection]?.title
    }
 }

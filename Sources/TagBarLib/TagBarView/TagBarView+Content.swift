@@ -78,7 +78,7 @@ extension TagBarView {
    fileprivate func tagItems(reader: ScrollViewProxy) -> some View {
       ForEach(Array(tagTypes.indices), id: \.self) { i in // Iterates over each index in the tagTypes array.
          tagItem( // Calls the tagItem function to create a tag item view.
-            tagType: tagTypes[i], // Passes the tag type at index i from the tagTypes array.
+            tagType: tagTypes[safe: i] ?? TagBarItem(title: "Nil", iconURL: ""), // Passes the tag type at index i from the tagTypes array.
             i: i, // Passes the current index i.
             reader: reader // Passes the ScrollViewProxy instance for scrolling operations.
          )
@@ -115,7 +115,9 @@ extension TagBarView {
          isSelected: selection == i
       )
          .accessibilityElement(children: .contain) // ⚠️️ Enable accessID on container, since hstack is used in view modifer
-         .accessibilityIdentifier(tagTypes[i].title)  // Needed for accessibility targeting via label
+         .accessibilityIdentifier(tagTypes[safe: i]?.title ?? "")  // Needed for accessibility targeting via label
+      // - Fixme: ⚠️️ figure out what the bellow does, and maybe add it?
+      // .accessibilityAddTraits(isSelected ? .isSelected : [])
          .background( // ⚠️️ Can also be put in overlay
             backgroundView( // Calls the backgroundView function to generate the background view for the tag item.
                i: i, // Passes the current index i to the backgroundView function.
