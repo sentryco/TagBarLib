@@ -4,7 +4,6 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Swift Version](https://img.shields.io/badge/Swift-5.9-F05138.svg?logo=swift&logoColor=white)](https://swift.org)
 
-
 # TagBarLib
 
 > Horizontal TagBar for iOS

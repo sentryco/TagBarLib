@@ -54,6 +54,7 @@ extension HighLightViewModifier {
       RoundedRectangle(cornerRadius: cornerRadius) // A view that highlights a `TagBarItem` with a rounded corner background
          .foregroundColor( // The background color of the highlight view.
             Color(
+               // fixme: use consts?
                light: .gray.opacity(0.2), // The background color for light mode with 20% opacity.
                dark: .white.opacity(0.14) // The background color for dark mode with 14% opacity.
             )
