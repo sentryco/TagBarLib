@@ -32,13 +32,29 @@ TagBarLib is a Swift package that provides a customizable Tag Bar view for iOS
 ## Usage
 
 ```swift
+import SwiftUI
 import TagBarLib
 
-// Initialize the tag bar view with your tag types and a binding to the selected tag
-let tagBarView = TagBarView(tagTypes: [.red, .blue, .green], selection: $selectedTag)
+struct ContentView: View {
+   @State private var selectedTag = 0
+
+   let tags = [
+      TagBarItem(title: "Home", iconURL: "house"),
+      TagBarItem(title: "Search", iconURL: "magnifyingglass"),
+      TagBarItem(title: "Profile", iconURL: "person.circle")
+   ]
+
+   var body: some View {
+      VStack {
+         TagBarView(
+            tagTypes: tags,
+            selection: $selectedTag
+         )
+         // Rest of your view goes here
+      }
+   }
+}
 ```
-
-
 
 ### Swift Package Manager:
 
