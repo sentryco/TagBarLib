@@ -46,6 +46,11 @@ public struct TagBarView: View {
     */
    @State internal var highlight: CGRect = .zero // Sets the highlight view to the specified `TagBarItem`.
    /**
+    * - Fixme: ⚠️️ add doc
+    * - Fixme: ⚠️️ add this soon
+    */
+//   public var style: TagBarStyle = .defaultStyle
+   /**
     * Initializes a new instance of `TagBarView`.
     * - Description: This initializer sets up the `TagBarView` instance with
     *                the provided `tagTypes` model and initializes the

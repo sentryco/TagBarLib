@@ -1,5 +1,9 @@
 [![Tests](https://github.com/sentryco/TagBarLib/actions/workflows/Tests.yml/badge.svg)](https://github.com/sentryco/TagBarLib/actions/workflows/Tests.yml)
 [![codebeat badge](https://codebeat.co/badges/959f5756-05b8-44d5-b7da-8780402fee5a)](https://codebeat.co/projects/github-com-sentryco-tagbarlib-main)
+[![Platforms](https://img.shields.io/badge/Platforms-iOS%20%7C%20macOS-000000.svg?logo=apple&logoColor=white)](#)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Swift Version](https://img.shields.io/badge/Swift-5.9-F05138.svg?logo=swift&logoColor=white)](https://swift.org)
+
 
 # TagBarLib
 
@@ -17,17 +21,25 @@ TagBarLib is a Swift package that provides a customizable Tag Bar view for iOS
 - [Usage](#usage)
 - [Todo](#todo)
 
-## Mindset:
-1. TagBar is a customized ScrollView with animated highlight (animates to visible). 
-2. It provides a horizontal list of buttons with a selection state that animates on the x-axis. 
-3. It uses ScrolView as the base component.
+## Problem
+
+- Apple's native horizontal scrollable tag bar does not have an **animated background highlight**.
+- Apple's native horizontal scrollable tag bar does not **move into view** when a button that is slightly out of view is tapped.
+- Apple's native horizontal scrollable tag bar does not have APIs to **move focus to the beginning or end**.
+
+## Solution
+
+1. **TagBar** is a customized `ScrollView` with an animated highlight that ensures the selected item is visible.
+2. It provides a horizontal list of buttons with a selection state that animates along the x-axis.
+3. It uses `ScrollView` as the base component.
 
 ## Features
 
-- Customizable tag types
-- Dynamic selection and highlighting of tags
-- Horizontal list of buttons
-- Has selection state that animates on the x-axis
+- **Customizable Tags**: Define your own tags with titles and icons.
+- **Animated Highlighting**: Smooth animations when selecting tags.
+- **Horizontal Scrolling**: Tags are displayed in a horizontally scrollable view.
+- **Selection State Management**: Easily manage which tag is selected.
+- **Accessibility Support**: Fully supports VoiceOver and dynamic type.
 
 ## Usage
 
@@ -37,13 +49,11 @@ import TagBarLib
 
 struct ContentView: View {
    @State private var selectedTag = 0
-
    let tags = [
       TagBarItem(title: "Home", iconURL: "house"),
       TagBarItem(title: "Search", iconURL: "magnifyingglass"),
       TagBarItem(title: "Profile", iconURL: "person.circle")
    ]
-
    var body: some View {
       VStack {
          TagBarView(
@@ -56,10 +66,13 @@ struct ContentView: View {
 }
 ```
 
+> **Note**
+> You can apply your own font or text color by using a `ViewModifier`. Apply it to `TagBarView`.
+
 ### Swift Package Manager:
 
 ```swift
-.package(url: "https://github.com/sentryco/TagBarLib.git", branch: "main")
+.package(url: "https://github.com/sentryco/TagBarLib", branch: "main")
 ```
 
 ### Todo:
