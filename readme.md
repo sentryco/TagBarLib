@@ -59,6 +59,7 @@ struct DummyBarView: View {
          }
       }
    }
+   // fixme: add doc
    func rowItem(i: Int) -> some View {
       let title = tagTypes[i]
       return Text(title)
@@ -71,6 +72,7 @@ struct DummyBarView: View {
          }
    }
 }
+// preview
 #Preview {
    struct DummyContainer: View {
       @State var selectedIndex: Int = 0

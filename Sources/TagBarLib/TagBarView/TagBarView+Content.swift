@@ -101,6 +101,7 @@ extension TagBarView {
     * - Note: It is possible to use a button as well but the issue remains with detecting hit in UITest
     * - Note: relevant to the hitarea discussion: https://stackoverflow.com/questions/58696455/swiftui-ontapgesture-on-color-clear-background-behaves-differently-to-color-blue/60151771#60151771
     * - Fixme: ⚠️️ It might be possible to fix the padding annoyance, with a button. but figure out how to style a button without a down state first. probably easy
+    * - Fixme: ⚠️️ use UUID instead of i
     * - Parameters:
     *   - tagType: The type of the tag item.
     *   - i: The index of the tag item.
@@ -108,12 +109,11 @@ extension TagBarView {
     * - Returns: A View representing the tag item.
     */
    fileprivate func tagItem(tagType: TagTypeKind, i: Int, reader: ScrollViewProxy) -> some View {
-      Text(tagType.title) // Button doesn't work with press action out of the box, so we use text and onGesture
-         .disabled(true) // We need to be able to tap the background
-         .tagItemViewModifier( // Applies the tagItemViewModifier to the Text view.
-            isSelected: selection == i, // Determines if the current tag item is selected based on the current selection state.
-            iconName: tagType.iconURL // Specifies the URL of the icon for the current tag item.
-         )
+      TagBarItemView(
+         title: tagType.title,
+         iconURL: tagType.iconURL,
+         isSelected: selection == i
+      )
          .accessibilityElement(children: .contain) // ⚠️️ Enable accessID on container, since hstack is used in view modifer
          .accessibilityIdentifier(tagTypes[i].title)  // Needed for accessibility targeting via label
          .background( // ⚠️️ Can also be put in overlay
