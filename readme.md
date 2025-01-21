@@ -87,3 +87,34 @@ struct ContentView: View {
 - Add ways to inject size, style, accessID. Potentially as struct or typealias
 - Remove Unit-test
 - Add problem / solution to readme
+- Allow users to customize the appearance of `TagBarView` more extensively by introducing a `TagBarStyle` configuration.
+
+```swift:Sources/TagBarLib/TagBarStyle.swift
+import SwiftUI
+
+public struct TagBarStyle {
+      public var selectedBackgroundColor: Color
+      public var unselectedBackgroundColor: Color
+      public var selectedTextColor: Color
+      public var unselectedTextColor: Color
+      public var highlightCornerRadius: CGFloat
+
+      public static let defaultStyle = TagBarStyle(
+         selectedBackgroundColor: .accentColor,
+         unselectedBackgroundColor: .clear,
+         selectedTextColor: .white,
+         unselectedTextColor: .primary,
+         highlightCornerRadius: 8
+      )
+}
+public struct TagBarView: View {
+       // Existing properties...
+       public var style: TagBarStyle
+
+       public init(tagTypes: [TagTypeKind], selection: Binding<Int>, style: TagBarStyle = .defaultStyle) {
+           self.tagTypes = tagTypes
+           self._selection = selection
+           self.style = style
+       }
+   }
+```
