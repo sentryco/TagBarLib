@@ -46,7 +46,6 @@ public struct TagBarView: View {
     */
    @State internal var highlight: CGRect = .zero // Sets the highlight view to the specified `TagBarItem`.
    /**
-    * - Fixme: ⚠️️ add doc
     * - Fixme: ⚠️️ add this soon
     */
 //   public var style: TagBarStyle = .defaultStyle

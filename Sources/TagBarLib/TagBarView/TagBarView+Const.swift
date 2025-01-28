@@ -5,7 +5,14 @@ import Foundation
  */
 extension TagBarView {
    /**
-    * fixme: add doc
+    * A struct containing static constants used throughout the `TagBarView` component.
+    *
+    * - Description: The `Constants` struct centralizes all static constant values
+    *                such as dimensions, spacing, and identifiers used within the
+    *                `TagBarView`. Centralizing these constants improves maintainability
+    *                and ensures consistency in the component's appearance and behavior.
+    *
+    * - Note: Consider adding inner and outer margins as constants for enhanced customization.
     */
    struct Constants {
       /**
