@@ -2,8 +2,6 @@ import SwiftUI
 import HybridColor
 /**
  * Preview
- * - Fixme: ⚠️️ Add darkmode to preview?
- * - Fixme: ⚠️️ Add preview for macOS?
  * - Fixme: ⚠️️ Add PreviewContainer as debug fenced internal view
  */
 #Preview {

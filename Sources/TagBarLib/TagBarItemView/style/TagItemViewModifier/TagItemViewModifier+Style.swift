@@ -1,7 +1,7 @@
 import SwiftUI
 /**
  * Style
- * - Fixme: ⚠️️ We could redesign this to be simpler. Do it later
+ * - Fixme: ⚠️️ We could redesign this to be simpler. Do it later. elaborate?
  */
 extension TagItemViewModifier {
    /**
@@ -80,8 +80,8 @@ extension TagItemViewModifier {
  * - Description: The `Style` struct defines the visual appearance of a tag item within the TagBar, 
  *                including its label color, background color, and icon color when it is in an active state.
  * - Remark: Consider using a struct instead of a type alias for better type safety and encapsulation.
- * - Fixme: ⚠️️ This type alias is a placeholder and should be replaced with a proper implementation.
- * - Fixme: ⚠️️ Maybe use proper button style etc?
+ * - Fixme: ⚠️️ This type alias is a placeholder and should be replaced with a proper implementation. still relevant?
+ * - Fixme: ⚠️️ Maybe use proper button style etc? elaborate?
  */
 extension TagItemViewModifier {
    /**

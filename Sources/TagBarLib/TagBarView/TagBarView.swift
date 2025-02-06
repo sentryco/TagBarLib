@@ -10,10 +10,8 @@ import SwiftUI
  * - Remark: SwiftUI `List` doesn't support rendering and scrolling in a horizontal axis, but you achieve that with ScrollView and LazyHStack.
  * - Note: This is its own repo so we can have less code in app target, own docs, tests etc, and own preview, microservice style!!!
  * - Note: We could use empty trash edition of the trash icon when trash is empty but it doesnt make complete sense from an UX POV, anyways here is the icon we could use: https://feathericons.com/?query=trash
- * - Fixme: ⚠️️ Mark all tagbar code iOS only? 👈 (Do this when cleaning up)
+ * - Fixme: ⚠️️ Mark all tagbar code iOS only? 👈 (Do this when cleaning up) (Use composer to do it?)
  * - Fixme: ⚠️️ Maybe make methods that scrolls to start and end? see legacy for code, add this if use case for emerges etc
- * - Fixme: ⚠️️ Consider opensourcing this repo 👈
- * - Fixme: ⚠️️ Use uuid as selected index? or overkill?
  */
 public struct TagBarView: View {
    /**
@@ -25,7 +23,6 @@ public struct TagBarView: View {
     * The left and right margin of the `TagBarView` component
     * - Description: Provides internal horizontal margins to ensure content is inset properly within the view boundaries.
     * - Important: ⚠️️ Using this as padding avoids clipping that would occure with normal padding etc
-    * - Fixme: ⚠️️ move 12 to const? 👈
     */
    internal let internalHorizontalMargin: CGFloat = 12
    /**
@@ -34,7 +31,7 @@ public struct TagBarView: View {
     * - Note: To scroll to start: just set selection 0
     * - Note: To scroll to end just set selectiom to tagTypes.count - 1
     * - Note: mindset is that the user of this struct has the state of selection
-    * - Fixme: ⚠️️ Try using id as selection instead, will require setting the selection on init etc  (UUID)?
+    * - Fixme: ⚠️️ Use uuid as selected index? or overkill? do it later. might be useful if tag items can change. i.e categories etc
     */
    @Binding public var selection: Int
    /**
@@ -48,7 +45,7 @@ public struct TagBarView: View {
    /**
     * - Fixme: ⚠️️ add this soon
     */
-//   public var style: TagBarStyle = .defaultStyle
+   //  public var style: TagBarStyle = .defaultStyle
    /**
     * Initializes a new instance of `TagBarView`.
     * - Description: This initializer sets up the `TagBarView` instance with
@@ -57,7 +54,7 @@ public struct TagBarView: View {
     *                selected tag index.
     * - Note: This method sets up the `TagBarView` instance with the provided `tagTypes` model.
     * - Note: It also initializes the `selection` binding
-    * - Fixme: ⚠️️ Add an init that converts selectedTagType to selection-index etc?
+    * - Fixme: ⚠️️ Add an init that converts selectedTagType to selection-index etc? elaborate?
     * - Parameters:
     *   - tagTypes: An array of `TagTypeKind` representing the types of tags to be displayed in the `TagBarView`.
     *   - selection: A `Binding` to an `Int` that represents the currently selected tag index.

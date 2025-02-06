@@ -6,8 +6,7 @@ import SwiftUI
                   resulting in a highlighted area with a rounded corner background. The size of the highlighted 
                   area is defined by the `rect` parameter, and the roundness of the corners is defined by the 
                   `cornerRadius` parameter.
- * - Fixme: ⚠️️ seems a bit out of order ?
- * - Fixme: ⚠️️ maybe add darkmode etc? 👈
+ * - Fixme: ⚠️️ seems a bit out of order ? still relevant?
  */
 #Preview {
    Rectangle()

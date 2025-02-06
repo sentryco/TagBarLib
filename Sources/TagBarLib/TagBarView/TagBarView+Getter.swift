@@ -10,7 +10,6 @@ extension TagBarView {
     *                selection index is out of bounds, it returns `nil`.
     * - Note: Returns `nil` if no item is selected
     * - Returns: An optional `String` containing the title of the selected `TagBarItem`, or `nil` if no item is selected.
-    * - Fixme: ⚠️️ use safe: array call ? add safe extension to package etc?
     */
    public var getSelectedTagItemTitleStr: String? {
       // Make sure selection is within count

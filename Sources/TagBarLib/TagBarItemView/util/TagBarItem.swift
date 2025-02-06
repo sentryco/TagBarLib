@@ -5,9 +5,9 @@ import Foundation
  *                Each item has a title and an associated icon URL. The item can be 
  *                in an active or inactive state.
  * - Remark: Has icon and label and active / in-active state
- * - Note: We don't need UUID as id, because we use int index as the id, - Fixme: ⚠️️ but why? add some reasoning
+ * - Note: We don't need UUID as id, because we use int index as the id, - Fixme: ⚠️️ but why? add some reasoning, use copilot to discuss this
  * - Note: Alt name: `TagBarItemModel`
- * - Fixme: ⚠️️ Maybe to animate icon selection state? 0.2 quick transition?
+ * - Fixme: ⚠️️ Maybe to animate icon selection state? 0.2 quick transition? elaborate? move to github issues?
  */
 public struct TagBarItem: TagTypeKind {
    /**

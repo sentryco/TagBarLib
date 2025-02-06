@@ -11,7 +11,6 @@ extension TagBarView {
     *                such as dimensions, spacing, and identifiers used within the
     *                `TagBarView`. Centralizing these constants improves maintainability
     *                and ensures consistency in the component's appearance and behavior.
-    *
     * - Note: Consider adding inner and outer margins as constants for enhanced customization.
     */
    struct Constants {

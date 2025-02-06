@@ -5,7 +5,7 @@ import HybridColor
  * - Description: This `ViewModifier` ensures uniform styling for header icons
  *                by configuring attributes such as the icon's name, size, color,
  *                background, stroke, and padding.
- * - Fixme: ⚠️️ Use modifiers for some of the styling here etc
+ * - Fixme: ⚠️️ Use modifiers for some of the styling here etc, elaborate?
  */
 fileprivate struct HeaderIconViewModifier: ViewModifier {
    /**

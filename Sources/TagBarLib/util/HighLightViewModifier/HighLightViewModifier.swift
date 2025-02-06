@@ -28,7 +28,6 @@ extension HighLightViewModifier {
     * - Desctiption: This function applies a highlight view modifier to the
     *                content view, creating a highlighted area with a rounded
     *                corner background.
-    * - Fixme: ⚠️️ Clean up colors a bit etc, in what way?
     * - Fixme: ⚠️️ Use this as the foreground color etc: `Palette.SideBar.highlight`
     * - Parameter content: The view to which the highlight view modifier is applied.
     * - Returns: A view with the highlight view modifier applied.
@@ -54,7 +53,7 @@ extension HighLightViewModifier {
       RoundedRectangle(cornerRadius: cornerRadius) // A view that highlights a `TagBarItem` with a rounded corner background
          .foregroundColor( // The background color of the highlight view.
             Color(
-               // fixme: use consts?
+               // fixme: use consts? probably use style later
                light: .gray.opacity(0.2), // The background color for light mode with 20% opacity.
                dark: .white.opacity(0.14) // The background color for dark mode with 14% opacity.
             )

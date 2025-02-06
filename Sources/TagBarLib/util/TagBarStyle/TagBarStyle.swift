@@ -1,5 +1,6 @@
 import SwiftUI
 // ⚠️️ not in use yet
+// fixme: add doc to it
 public struct TagBarStyle {
    public var selectedBackgroundColor: Color
    public var unselectedBackgroundColor: Color

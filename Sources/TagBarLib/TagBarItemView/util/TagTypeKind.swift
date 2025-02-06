@@ -4,7 +4,7 @@ import Foundation
  * - Description: This protocol defines the requirements for a tag type that can be used within a `TagBarView`. 
  *                It includes properties for the title and icon URL of the tag, which are essential for displaying 
  *                the tag correctly in the user interface.
- * - Fixme: ⚠️️ : why is this protocol needed? 
+ * - Fixme: ⚠️️ why is this protocol needed? add rational? use copilot?
  */
 public protocol TagTypeKind {
    /**

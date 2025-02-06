@@ -5,8 +5,7 @@ import SwiftUI
  *                This includes setting the icon color, font color, icon name, padding, and background color.
  * - Remark: Has icon and label and active / in-active state
  * - Note: The reason we don't make tag-item-view as a button, is because we need to use gesture on down events, but could be Worth an exploration later if its possible to use Button. will require some lengthy effort probably
- * - Fixme: ⚠️️ Remove style etc? just use modifier etc, store style in a custom modifier etc? still relevant?
- * - Fixme: ⚠️️ Maybe animate icon selection state? 0.2 quick transition?
+ * - Fixme: ⚠️️ Maybe animate icon selection state? 0.2 quick transition? elaborate? move to github issue?
  */
 internal struct TagItemViewModifier: ViewModifier {
    /**

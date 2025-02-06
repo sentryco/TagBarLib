@@ -5,16 +5,11 @@ import HybridColor
  * Preview
  * - Description: Provides a preview of the `TagBarView` component within a debug environment. This preview setup includes a `DebugView` struct that initializes the `TagBarView` with dummy data and state bindings for interactive testing. The preview is configured to display the component in a dark color scheme and within a context that simulates its appearance and behavior in a live application.
  * - Important: ⚠️️ Use canvas device settings to toggle dark / light mode
- * - Fixme: ⚠️️ Add previewcontainer manually with zstack etc, or just add previewcontainer to repo?
- * - Fixme: ⚠️️ Also fix hybridcolor import, it's buggy, whts buggy about it?
- * - Fixme: ⚠️️ Move to closure??? why?
  * - Note: The frame modifier is used to set the maximum width and height of the TagBarView to ensure it fits within the preview container. This is particularly useful for previewing the view in a specific size context.
  */
 #Preview {
-   struct DebugView: View {
-      @State var selectedIdx: Int = 0
-      var body: some View {
-         TagBarView( // Creates an instance of TagBarView for preview purposes
+     @Previewable @State var selectedIdx: Int = 0
+       TagBarView( // Creates an instance of TagBarView for preview purposes
             tagTypes: TagBarView.tagItems, // Passes the static tagItems array from TagBarView as the tagTypes parameter.
             selection: $selectedIdx // Binds the selectedIdx state variable to the selection parameter.
          )
@@ -23,9 +18,6 @@ import HybridColor
          .padding(.horizontal, .zero)
          //.previewLayout(.sizeThatFits) // Sets the preview layout to size that fits the content
          .background(Color.gray.opacity(0.16)) // Sets the background color of the preview to black
-      }
-   }
-   return DebugView()
       .frame(maxWidth: .infinity, maxHeight: .infinity)
       // .environment(\.colorScheme, .dark)
 }
