@@ -2,7 +2,7 @@ import SwiftUI
 import HybridColor
 /**
  * Used for `back` and `more` button in header
- * fixme: add abstract
+ * Abstract: A `ButtonStyle` that defines a consistent visual appearance for header icons, including properties such as icon name, size, color, background, stroke, and padding. This style is used for header buttons like 'back' and 'more' to ensure a cohesive design.
  * - Description: The `HeaderIconStyle` is a `ButtonStyle` used to style header
  *                buttons with a consistent design language. It defines the visual
  *                elements of the button, such as icon name, size, color,
